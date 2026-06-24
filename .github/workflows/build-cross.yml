@@ -141,7 +141,7 @@ jobs:
           .\example.exe
 
   cross-aarch64-linux-gnu:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: non-cross
     steps:
       - name: Download Artifact
@@ -198,7 +198,7 @@ jobs:
           git diff --no-index utf8.ref utf8
 
   cross-x86_64-linux-android21:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: non-cross
     env:
       # https://developer.android.com/ndk/downloads#lts-downloads
