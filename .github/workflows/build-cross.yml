@@ -37,7 +37,7 @@ env:
 jobs:
   non-cross:
     if: contains(github.event.pull_request.labels.*.name, 'run-crosscompiler-tests')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout OCaml
         uses: actions/checkout@v6
@@ -67,7 +67,7 @@ jobs:
           retention-days: 1
 
   cross-x86_64-w64-mingw32:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: non-cross
     steps:
       - name: Download Artifact
