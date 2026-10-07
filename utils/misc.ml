@@ -148,15 +148,6 @@ module Stdlib = struct
 
     let iteri2 f l1 l2 = iteri2 0 f l1 l2
 
-    let some_if_all_elements_are_some l =
-      let rec aux acc l =
-        match l with
-        | [] -> Some (List.rev acc)
-        | None :: _ -> None
-        | Some h :: t -> aux (h :: acc) t
-      in
-      aux [] l
-
     let split_at n l =
       let rec aux n acc l =
         if n = 0

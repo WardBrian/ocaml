@@ -133,11 +133,6 @@ module Stdlib : sig
     (** Returns [true] if and only if the given lists have the same length and
         content with respect to the given equality function. *)
 
-    val some_if_all_elements_are_some : 'a option t -> 'a t option
-    (** If all elements of the given list are [Some _] then [Some xs]
-        is returned with the [xs] being the contents of those [Some]s, with
-        order preserved.  Otherwise return [None]. *)
-
     val map2_prefix : ('a -> 'b -> 'c) -> 'a t -> 'b t -> ('c t * 'b t)
     (** [let r1, r2 = map2_prefix f l1 l2]
         If [l1] is of length n and [l2 = h2 @ t2] with h2 of length n,
